@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Firefox Send
-        run: sudo bash ffsend.sh
+        run: bash ffsend.sh
         env:
           WXPUSHER_APPTOKEN: ${{ secrets.WXPUSHER_APPTOKEN }}
           WXPUSHER_UID: ${{ secrets.WXPUSHER_UID }}
