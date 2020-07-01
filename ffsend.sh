@@ -17,5 +17,5 @@ for f in /dev/shm/share/*; do
 	FFSEND_URL=$(/tmp/ffsend -Ifyq upload $f)
 	FILE=$(basename $f)
 	data="$FILE-$SIZE-${FFSEND_URL}"
-	curl -skLo /dev/null "https://wxpusher.zjiecode.com/api/send/message/?appToken=${WXPUSHER_APPTOKEN}&uid=${WXPUSHER_UID}&content=${data/\#/%23}"
+	curl -skL "https://wxpusher.zjiecode.com/api/send/message/?appToken=${WXPUSHER_APPTOKEN}&uid=${WXPUSHER_UID}&content=${data/\#/%23}"
 done
